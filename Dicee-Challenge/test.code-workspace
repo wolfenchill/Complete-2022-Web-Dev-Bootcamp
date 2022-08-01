@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../auto-song-v2"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Complete-2022-Web-Dev-Bootcamp"
+	}
+}
