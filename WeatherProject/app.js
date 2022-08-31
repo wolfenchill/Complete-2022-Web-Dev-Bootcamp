@@ -13,11 +13,17 @@ app.get("/", function(req, res) {
             console.log(temp);
             const description = weatherData.weather[0].description;
             console.log(description);
+            const icon = weatherData.weather[0].icon;
             const displayTemp =
                 "<h1>The temperature in London is " + temp + " degrees Fahrenheit</h1>";
             const displayDescription =
                 "<h1>The weather is currently " + description + "</h1>";
-            res.send(displayTemp + displayDescription);
+
+            const imgURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+            res.write(displayTemp);
+            res.write(displayDescription);
+            res.write(`<img src = ${imgURL}>`);
+            res.send();
         });
     });
 });
