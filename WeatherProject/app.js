@@ -13,8 +13,12 @@ app.get("/", function(req, res) {
             console.log(temp);
             const description = weatherData.weather[0].description;
             console.log(description);
+            const displayTemp =
+                "<h1>The temperature in London is " + temp + " degrees Fahrenheit</h1>";
+            const displayDescription =
+                "<h1>The weather is currently " + description + "</h1>";
+            res.send(displayTemp + displayDescription);
         });
-        res.send("Server is up and running.");
     });
 });
 
